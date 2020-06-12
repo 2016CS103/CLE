@@ -44,7 +44,11 @@ def text_line(histogram_Array):
         if updated_start != 0:
             start = updated_start
         if(j == 0):
-            start = indexs[j] + 1
+            if indexs[j] == 0:
+                start = indexs[j] + 1
+            else:
+                start = 0
+                end = indexs[j] - 1
         else:
             end = indexs[j] - 1
             updated_start = indexs[j] + 1
